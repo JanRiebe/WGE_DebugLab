@@ -8,10 +8,15 @@ public class ForLoopScript : MonoBehaviour {
     public void ExecuteLoop()
     {
         int x = 0;
-
-        for (int i = 0; i < 10; i++)
+        System.Diagnostics.Stopwatch stopWatch = new System.Diagnostics.Stopwatch();
+        stopWatch.Start();
+        for (int i = 0; i < 500; i++)
         {
             x += i;
+            //Debug.Log("Value of x = " + x);
         }
+        stopWatch.Stop();
+        Debug.Log("Time taken: " + stopWatch.Elapsed);
     }
+
 }
